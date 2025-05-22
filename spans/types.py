@@ -124,7 +124,7 @@ class Range(PartialOrderingMixin, PicklableSlotMixin):
 
         if upper is not None and not isinstance(upper, self.type):
             raise TypeError(
-                f"Invalid type for lower bound '{upper.__class__.__name__}'"
+                f"Invalid type for upper bound '{upper.__class__.__name__}'"
                 f" expected '{self.type.__name__}'"
             )
 
