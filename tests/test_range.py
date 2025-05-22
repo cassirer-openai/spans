@@ -66,6 +66,11 @@ def test_invalid_construction(range_type, lower, upper, lower_inc, upper_inc, ex
         range_type(lower, upper, lower_inc, upper_inc)
 
 
+def test_invalid_upper_bound_message():
+    with pytest.raises(TypeError, match="upper bound"):
+        intrange(1, 1.5)
+
+
 @pytest.mark.parametrize(
     "range_type, lower, upper",
     [
