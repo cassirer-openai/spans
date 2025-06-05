@@ -1,7 +1,9 @@
-import spans
+from datetime import date, datetime, timedelta
+
 import pytest
 
-from datetime import date, datetime, timedelta
+import spans
+
 
 @pytest.fixture(autouse=True)
 def doctest_fixture(doctest_namespace):
