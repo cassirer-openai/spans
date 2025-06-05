@@ -1,4 +1,4 @@
-from timeit import timeit, repeat
+from timeit import repeat, timeit
 
 from spans import *
 
@@ -28,10 +28,13 @@ def run_benchmark(func, number=None):
 
     total_time = sum(repeat(func, repeat=3, number=number)) / 3
 
-    print("{func:.<40} {loops} loops, best of 3: {per_loop} per loop".format(
-        func=func.__name__ + " ",
-        loops=number,
-        per_loop=format_sec(total_time / float(number))))
+    print(
+        "{func:.<40} {loops} loops, best of 3: {per_loop} per loop".format(
+            func=func.__name__ + " ",
+            loops=number,
+            per_loop=format_sec(total_time / float(number)),
+        )
+    )
 
 
 # Create ranges here to prevent __init__ from affecting test results
