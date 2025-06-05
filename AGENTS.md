@@ -5,4 +5,4 @@
 - **Tests**: Run `poetry run pytest`.
 - **TDD**: When fixing or adding features, first add a failing test and run it.
   After confirming the failure, implement the change and run tests again to
-  show they pass. Cite both executions in your output.
+  show they pass. You **MUST** Cite both executions in your output.
